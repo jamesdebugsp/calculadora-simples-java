@@ -1,25 +1,21 @@
+import java.util.Scanner;
+
 public class CalculadoraSimples {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 2;
+        Scanner scanner = new Scanner(System.in);
 
-        
-        int soma = a + b;
-        System.out.println("Soma: " + soma);
+        System.out.print("Digite o valor de a: ");
+        int a = scanner.nextInt();
 
-       
-        int subtracao = a - b;
-        System.out.println("Subtração: " + subtracao);
+        System.out.print("Digite o valor de b: ");
+        int b = scanner.nextInt();
 
-       
-        int multiplicacao = a * b;
-        System.out.println("Multiplicação: " + multiplicacao);
+        System.out.println("Soma: " + (a + b));
+        System.out.println("Subtração: " + (a - b));
+        System.out.println("Multiplicação: " + (a * b));
+        System.out.println("Divisão: " + ((double) a / b));
+        System.out.println("Resto: " + (a % b));
 
-        
-        double divisao = (double) a / b;
-        System.out.println("Divisão: " + divisao);
-
-        int resto = a % b;
-        System.out.println("Resto: " + resto);
+        scanner.close();
     }
 }
